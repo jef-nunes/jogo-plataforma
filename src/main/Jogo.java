@@ -26,6 +26,7 @@ public class Jogo implements Runnable
 			agora = System.nanoTime();
 			if(agora - ultimoFrame >= tempoPorFrame)
 			{
+				this.painel.fixRectPos();
 				this.painel.repaint();
 				ultimoFrame = agora;
 				frames++;
@@ -34,7 +35,7 @@ public class Jogo implements Runnable
 			if(System.currentTimeMillis() - ultimoCheck >= 1000)
 			{
 				ultimoCheck = System.currentTimeMillis();
-				System.out.println("FPS: "+frames);
+				//System.out.println("FPS: "+frames);
 				frames=0;
 			}
 		}

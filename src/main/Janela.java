@@ -8,11 +8,13 @@ public class Janela
 	private int altura = 400;
 	public Janela(Painel painel)
 	{
-		jframe = new JFrame();
-		jframe.setSize(largura,altura);
-		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		jframe.add(painel);
-		jframe.setLocationRelativeTo(null);
-		jframe.setVisible(true);
+		this.jframe = new JFrame();
+		//this.jframe.setSize(largura,altura);
+		this.jframe.setResizable(false);
+		this.jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.jframe.add(painel);
+		this.jframe.setLocationRelativeTo(null);
+		this.jframe.pack();
+		this.jframe.setVisible(true);
 	}
 }
